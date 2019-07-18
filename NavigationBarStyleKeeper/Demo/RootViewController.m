@@ -7,8 +7,15 @@
 //
 
 #import "RootViewController.h"
+#import "ViewControllerA.h"
+#import "ViewControllerB.h"
+#import "ViewControllerC.h"
 
 @interface RootViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *AButton;
+@property (weak, nonatomic) IBOutlet UIButton *BButton;
+@property (weak, nonatomic) IBOutlet UIButton *CButton;
 
 @end
 
@@ -16,17 +23,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self pr_renderAction];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)pr_renderAction
+{
+    [self.AButton addTarget:self action:@selector(AAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.BButton addTarget:self action:@selector(BAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.CButton addTarget:self action:@selector(CAction) forControlEvents:UIControlEventTouchUpInside];
 }
-*/
+
+- (void)AAction
+{
+    ViewControllerA *aVC = [[ViewControllerA alloc] init];
+    if (self.navigationController) {
+        [self.navigationController pushViewController:aVC animated:YES];
+    }
+}
+
+- (void)BAction
+{
+    ViewControllerB *bVC = [[ViewControllerB alloc] init];
+    if (self.navigationController) {
+        [self.navigationController pushViewController:bVC animated:YES];
+    }
+}
+
+- (void)CAction
+{
+    ViewControllerC *cVC = [[ViewControllerC alloc] init];
+    if (self.navigationController) {
+        [self.navigationController pushViewController:cVC animated:YES];
+    }
+}
 
 @end

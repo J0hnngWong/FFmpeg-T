@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewControllerA">
             <connections>
-                <outlet property="AButton" destination="cnI-od-r9H" id="AkO-me-hbn"/>
-                <outlet property="BButton" destination="EGx-Yg-AXa" id="jxA-2S-qbE"/>
-                <outlet property="CButton" destination="OdA-lD-e2D" id="5dH-t4-SlC"/>
+                <outlet property="backButton" destination="cd8-ok-47p" id="Xfs-s9-rN8"/>
+                <outlet property="goToBVCButton" destination="FaS-IG-q84" id="Qh1-FX-r9H"/>
+                <outlet property="goToCVCButton" destination="kxj-gn-yrE" id="6kD-Xy-cTv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,18 +23,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Zw-9A-0Q3">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GWs-lx-bzd">
                     <rect key="frame" x="179.5" y="388" width="55" height="130"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnI-od-r9H">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd8-ok-47p">
                             <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
-                            <state key="normal" title="Go To A"/>
+                            <state key="normal" title="Back"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGx-Yg-AXa">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaS-IG-q84">
                             <rect key="frame" x="0.0" y="50" width="55" height="30"/>
                             <state key="normal" title="Go To B"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdA-lD-e2D">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxj-gn-yrE">
                             <rect key="frame" x="0.0" y="100" width="55" height="30"/>
                             <state key="normal" title="Go To C"/>
                         </button>
@@ -43,8 +43,8 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="3Zw-9A-0Q3" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="Brd-5N-mAC"/>
-                <constraint firstItem="3Zw-9A-0Q3" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="tQE-fA-bEc"/>
+                <constraint firstItem="GWs-lx-bzd" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="08Z-aV-oRQ"/>
+                <constraint firstItem="GWs-lx-bzd" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="8OF-9X-W22"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
