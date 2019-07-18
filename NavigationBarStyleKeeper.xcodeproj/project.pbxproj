@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7814A21A22E0187200C4B5A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814A21922E0187200C4B5A9 /* AppDelegate.m */; };
-		7814A21D22E0187200C4B5A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814A21C22E0187200C4B5A9 /* ViewController.m */; };
-		7814A22022E0187200C4B5A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7814A21E22E0187200C4B5A9 /* Main.storyboard */; };
 		7814A22222E0187400C4B5A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7814A22122E0187400C4B5A9 /* Assets.xcassets */; };
 		7814A22522E0187400C4B5A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7814A22322E0187400C4B5A9 /* LaunchScreen.storyboard */; };
 		7814A22822E0187400C4B5A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814A22722E0187400C4B5A9 /* main.m */; };
 		7814A23222E0187500C4B5A9 /* NavigationBarStyleKeeperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814A23122E0187500C4B5A9 /* NavigationBarStyleKeeperTests.m */; };
 		7814A23D22E0187500C4B5A9 /* NavigationBarStyleKeeperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814A23C22E0187500C4B5A9 /* NavigationBarStyleKeeperUITests.m */; };
+		7814A24D22E01A7200C4B5A9 /* RootNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814A24C22E01A7200C4B5A9 /* RootNavigationViewController.m */; };
+		7814A25422E01AE900C4B5A9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814A25222E01AE900C4B5A9 /* RootViewController.m */; };
+		7814A25522E01AE900C4B5A9 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7814A25322E01AE900C4B5A9 /* RootViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +39,6 @@
 		7814A21522E0187200C4B5A9 /* NavigationBarStyleKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationBarStyleKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7814A21822E0187200C4B5A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7814A21922E0187200C4B5A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7814A21B22E0187200C4B5A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7814A21C22E0187200C4B5A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7814A21F22E0187200C4B5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7814A22122E0187400C4B5A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7814A22422E0187400C4B5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7814A22622E0187400C4B5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +49,11 @@
 		7814A23822E0187500C4B5A9 /* NavigationBarStyleKeeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationBarStyleKeeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7814A23C22E0187500C4B5A9 /* NavigationBarStyleKeeperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationBarStyleKeeperUITests.m; sourceTree = "<group>"; };
 		7814A23E22E0187500C4B5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814A24B22E01A7100C4B5A9 /* RootNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootNavigationViewController.h; sourceTree = "<group>"; };
+		7814A24C22E01A7200C4B5A9 /* RootNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootNavigationViewController.m; sourceTree = "<group>"; };
+		7814A25122E01AE900C4B5A9 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		7814A25222E01AE900C4B5A9 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		7814A25322E01AE900C4B5A9 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +104,9 @@
 		7814A21722E0187200C4B5A9 /* NavigationBarStyleKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				7814A24A22E01A3800C4B5A9 /* Demo */,
 				7814A21822E0187200C4B5A9 /* AppDelegate.h */,
 				7814A21922E0187200C4B5A9 /* AppDelegate.m */,
-				7814A21B22E0187200C4B5A9 /* ViewController.h */,
-				7814A21C22E0187200C4B5A9 /* ViewController.m */,
-				7814A21E22E0187200C4B5A9 /* Main.storyboard */,
 				7814A22122E0187400C4B5A9 /* Assets.xcassets */,
 				7814A22322E0187400C4B5A9 /* LaunchScreen.storyboard */,
 				7814A22622E0187400C4B5A9 /* Info.plist */,
@@ -130,6 +131,18 @@
 				7814A23E22E0187500C4B5A9 /* Info.plist */,
 			);
 			path = NavigationBarStyleKeeperUITests;
+			sourceTree = "<group>";
+		};
+		7814A24A22E01A3800C4B5A9 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				7814A24B22E01A7100C4B5A9 /* RootNavigationViewController.h */,
+				7814A24C22E01A7200C4B5A9 /* RootNavigationViewController.m */,
+				7814A25122E01AE900C4B5A9 /* RootViewController.h */,
+				7814A25222E01AE900C4B5A9 /* RootViewController.m */,
+				7814A25322E01AE900C4B5A9 /* RootViewController.xib */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +250,7 @@
 			files = (
 				7814A22522E0187400C4B5A9 /* LaunchScreen.storyboard in Resources */,
 				7814A22222E0187400C4B5A9 /* Assets.xcassets in Resources */,
-				7814A22022E0187200C4B5A9 /* Main.storyboard in Resources */,
+				7814A25522E01AE900C4B5A9 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7814A21D22E0187200C4B5A9 /* ViewController.m in Sources */,
+				7814A24D22E01A7200C4B5A9 /* RootNavigationViewController.m in Sources */,
 				7814A22822E0187400C4B5A9 /* main.m in Sources */,
+				7814A25422E01AE900C4B5A9 /* RootViewController.m in Sources */,
 				7814A21A22E0187200C4B5A9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,14 +314,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7814A21E22E0187200C4B5A9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7814A21F22E0187200C4B5A9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7814A22322E0187400C4B5A9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  NavigationBarStyleKeeper
 //
 //  Created by 王嘉宁 on 2019/7/18.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface RootViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
