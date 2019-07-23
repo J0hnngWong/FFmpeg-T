@@ -22,6 +22,7 @@
 		7814A26022E01F0400C4B5A9 /* ViewControllerB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7814A25E22E01F0400C4B5A9 /* ViewControllerB.xib */; };
 		7814A26422E01F0F00C4B5A9 /* ViewControllerC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814A26222E01F0F00C4B5A9 /* ViewControllerC.m */; };
 		7814A26522E01F0F00C4B5A9 /* ViewControllerC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7814A26322E01F0F00C4B5A9 /* ViewControllerC.xib */; };
+		7814A26922E025F500C4B5A9 /* UIViewController+CustomStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7814A26822E025F500C4B5A9 /* UIViewController+CustomStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		7814A26122E01F0F00C4B5A9 /* ViewControllerC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerC.h; sourceTree = "<group>"; };
 		7814A26222E01F0F00C4B5A9 /* ViewControllerC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerC.m; sourceTree = "<group>"; };
 		7814A26322E01F0F00C4B5A9 /* ViewControllerC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewControllerC.xib; sourceTree = "<group>"; };
+		7814A26722E025F500C4B5A9 /* UIViewController+CustomStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CustomStyle.h"; sourceTree = "<group>"; };
+		7814A26822E025F500C4B5A9 /* UIViewController+CustomStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CustomStyle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,7 @@
 		7814A24A22E01A3800C4B5A9 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7814A26622E025C400C4B5A9 /* Category */,
 				7814A25622E01EE400C4B5A9 /* ViewControllers */,
 				7814A24B22E01A7100C4B5A9 /* RootNavigationViewController.h */,
 				7814A24C22E01A7200C4B5A9 /* RootNavigationViewController.m */,
@@ -175,6 +179,15 @@
 				7814A26322E01F0F00C4B5A9 /* ViewControllerC.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7814A26622E025C400C4B5A9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7814A26722E025F500C4B5A9 /* UIViewController+CustomStyle.h */,
+				7814A26822E025F500C4B5A9 /* UIViewController+CustomStyle.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +328,7 @@
 				7814A25A22E01EF800C4B5A9 /* ViewControllerA.m in Sources */,
 				7814A25422E01AE900C4B5A9 /* RootViewController.m in Sources */,
 				7814A26422E01F0F00C4B5A9 /* ViewControllerC.m in Sources */,
+				7814A26922E025F500C4B5A9 /* UIViewController+CustomStyle.m in Sources */,
 				7814A21A22E0187200C4B5A9 /* AppDelegate.m in Sources */,
 				7814A25F22E01F0400C4B5A9 /* ViewControllerB.m in Sources */,
 			);

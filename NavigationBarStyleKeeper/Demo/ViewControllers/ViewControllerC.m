@@ -9,6 +9,7 @@
 #import "ViewControllerC.h"
 #import "ViewControllerA.h"
 #import "ViewControllerB.h"
+#import "UIViewController+CustomStyle.h"
 
 @interface ViewControllerC ()
 
@@ -23,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self pr_renderAction];
+    [self showWhiteStyle];
 }
 
 - (void)pr_renderAction
