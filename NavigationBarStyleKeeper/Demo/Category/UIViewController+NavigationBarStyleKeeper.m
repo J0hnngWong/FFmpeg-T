@@ -41,6 +41,7 @@ NSString const * navigationBarTranslucentKey = @"navigationBarTranslucent";
     if (self.navigationBarPropertyDictionary == nil) {
         self.navigationBarPropertyDictionary = [[NSMutableDictionary alloc] init];
     }
+//    [self.navigationController setNavigationBarHidden:NO animated:NO];
     // save navigation bar style
     if (self.navigationController) {
         [self safeSetDictionary:self.navigationBarPropertyDictionary object:[self.navigationController.navigationBar.titleTextAttributes copy] forKey:navigationBarTitleTextAttributeKey];
@@ -55,14 +56,16 @@ NSString const * navigationBarTranslucentKey = @"navigationBarTranslucent";
 
 - (void)viewWillAppearRestoreNavigationBarStyle:(BOOL)animated
 {
-    for (UIViewController *viewController in self.navigationController.viewControllers) {
-        NSLog(@"++++++++++%@+++++++++++++", viewController);
-        [viewController.navigationBarPropertyDictionary enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            NSLog(@"key : %@------obj : %@", key, obj);
-        }];
-    }
+//    for (UIViewController *viewController in self.navigationController.viewControllers) {
+//        NSLog(@"++++++++++%@+++++++++++++", viewController);
+//        [viewController.navigationBarPropertyDictionary enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+//            NSLog(@"key : %@------obj : %@", key, obj);
+//        }];
+//    }
+//    [self.navigationController setNavigationBarHidden:YES animated:NO];
     // restore navigation bar style
     if (self.navigationBarPropertyDictionary && self.navigationController) {
+        // only pop to this controller will pass this condition check
         self.navigationController.navigationBar.titleTextAttributes = [self.navigationBarPropertyDictionary objectForKey:navigationBarTitleTextAttributeKey];
         self.navigationController.navigationBar.barTintColor = [self.navigationBarPropertyDictionary objectForKey:navigationBarBarTintColorKey];
         self.navigationController.navigationBar.tintColor = [self.navigationBarPropertyDictionary objectForKey:navigationBarTintColorKey];
@@ -72,6 +75,11 @@ NSString const * navigationBarTranslucentKey = @"navigationBarTranslucent";
     }
     [self viewWillAppearRestoreNavigationBarStyle:animated];
 }
+
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//    
+//}
 
 - (void)safeSetDictionary:(NSMutableDictionary *)dictionary object:(id)object forKey:(NSString const *)key
 {

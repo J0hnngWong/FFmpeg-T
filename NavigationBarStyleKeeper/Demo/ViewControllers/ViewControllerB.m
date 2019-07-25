@@ -25,6 +25,31 @@
     [super viewDidLoad];
     [self pr_renderAction];
     [self showPrimerStyle];
+    NSLog(@"%@ view did load", NSStringFromClass(self.class));
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"%@ view will appear", NSStringFromClass(self.class));
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"%@ view did appear", NSStringFromClass(self.class));
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"%@ view will disappear", NSStringFromClass(self.class));
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"%@ view did disappear", NSStringFromClass(self.class));
 }
 
 - (void)pr_renderAction
