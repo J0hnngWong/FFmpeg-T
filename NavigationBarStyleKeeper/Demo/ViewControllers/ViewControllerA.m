@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet UIButton *goToBVCButton;
 @property (weak, nonatomic) IBOutlet UIButton *goToCVCButton;
-@property (weak, nonatomic) IBOutlet UIButton *customButton;
 
 @end
 
@@ -38,10 +37,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.customButton.frame.size.width/2, self.customButton.frame.size.height)];
-    view.backgroundColor = [UIColor grayColor];
-    view.userInteractionEnabled = YES;
-    [self.customButton addSubview:view];
     NSLog(@"%@ view did appear", NSStringFromClass(self.class));
 }
 
@@ -87,9 +82,6 @@
     if (self.navigationController) {
         [self.navigationController pushViewController:cVC animated:YES];
     }
-}
-- (IBAction)button:(id)sender {
-    NSLog(@"-----click----------");
 }
 
 @end
