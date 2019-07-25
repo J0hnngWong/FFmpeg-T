@@ -36,7 +36,7 @@
     NSDictionary *textAttributes = @{NSForegroundColorAttributeName : [UIColor blackColor]};
     self.navigationController.navigationBar.titleTextAttributes = textAttributes;
     self.navigationController.navigationBar.barTintColor = color;
-    self.navigationController.navigationBar.tintColor = [UIColor grayColor];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.translucent = NO;
@@ -49,7 +49,7 @@
     }
     NSDictionary *textAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     self.navigationController.navigationBar.titleTextAttributes = textAttributes;
-    self.navigationController.navigationBar.barTintColor = [UIColor grayColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
