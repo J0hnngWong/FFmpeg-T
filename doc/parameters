@@ -1,0 +1,78 @@
+configure 命令
+
+For iOS:
+
+// 架构
+// 相关参数: $arch
+--arch=arm
+
+// 交叉编译
+// 交叉編譯器是指一個在某個系統平台下可以產生另一個系統平台的執行檔的編譯器。
+// 交叉編譯器在目標系統平台難以或不容易編譯時非常有用。
+// 交叉編譯器的存在對於從一個開發主機為多個平台編譯代碼是非常有必要的。
+// 直接在平台上編譯有時行不通，例如在一個嵌入式系統的單晶片，因為它們沒有完整的現代作業系統環境，無法直接編譯。
+// 相关参数: 无
+--enable-cross-compiling
+
+// 目标系统
+// 有android，aix，openbsd，freebsd等操作系统specific
+// https://en.wikipedia.org/wiki/IOS
+// 其中OS family为darwin，所以我们使用darwin即可
+// 相关参数: $target_os
+--target-os=darwin
+
+// use C compiler CC
+// 其中CC默认为cc_default，值为gcc
+// clang: 参数arch说明：Specify the architecture to build for
+// 应该是设定编译c以及oc代码使用的编译器，参数为目标架构
+--cc='clang -arch armv7'
+
+// root of cross-build tree
+/*
+gcc|llvm_gcc|clang)
+        add_cppflags --sysroot="$sysroot"
+        add_ldflags --sysroot="$sysroot"
+    ;;
+*/
+// 交叉编译中才会使用
+// 改变逻辑根目录
+// 在链接时作为搜索的根路径
+--sysroot=$(xcrun --sdk iphoneos --show-sdk-path)
+
+// select the minimum required CPU (affects
+//                           instruction selection, may crash on older CPUs)
+// probe_arm_arch
+/*
+case $cpu in
+        generic)
+            subarch=$(probe_arm_arch | sed 's/[^a-z0-9]//g')
+        ;;
+        armv*)
+            cpuflags="-march=$cpu"
+            subarch=$(echo $cpu | sed 's/[^a-z0-9]//g')
+        ;;
+        *)
+            cpuflags="-mcpu=$cpu"
+            case $cpu in
+                cortex-a*)                               subarch=armv7a  ;;
+                cortex-r*)                               subarch=armv7r  ;;
+                cortex-m*)                 enable thumb; subarch=armv7m  ;;
+                arm11*)                                  subarch=armv6   ;;
+                arm[79]*e*|arm9[24]6*|arm96*|arm102[26]) subarch=armv5te ;;
+                armv4*|arm7*|arm9[24]*)                  subarch=armv4   ;;
+                *)                             subarch=$(probe_arm_arch) ;;
+            esac
+        ;;
+    esac
+*/
+// 从iPhone5s（A7芯片）开始到iPhone13（A15芯片），都是ARMv8，指令集为A64
+// iPhone14 Pro（A16芯片）为 ARMv8.6-A，指令集为 AArch64
+--cpu=cortex-a8
+
+// build position-independent code
+// 在計算機領域中，地址無關代碼，又稱地址無關可執行文件，
+// 是指可在主存儲器中任意位置正確地運行，而不受其絕對地址影響的一種機器碼。
+// PIC廣泛使用於共享庫，使得同一個庫中的代碼能夠被加載到不同進程的地址空間中。
+// PIC還用於缺少內存管理單元的計算機系統中， 使得作業系統能夠在單一的地址空間中將不同的運行程序隔離開來。
+// https://zh.wikipedia.org/zh-tw/%E5%9C%B0%E5%9D%80%E6%97%A0%E5%85%B3%E4%BB%A3%E7%A0%81
+--enable-pic
